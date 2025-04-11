@@ -24,11 +24,10 @@ jobs:
          push: true
          tags: <docker-username>/<repo-name>:latest
  deploy:
- runs-on: ubuntu-latest
- needs: build-and-push # Run after the build-and-push job
- steps:
- - name: Deploy to Server
- run: |
-   echo "Deploying container to production..."
- # Add your deployment commands here (e.g., SSH to server and run
-Docker commands)
+  runs-on: ubuntu-latest
+  needs: build-and-push # Run after the build-and-push job
+  steps:
+    - name: Deploy to Server
+      run: |
+        echo "Deploying container to production..."
+        # Add your deployment commands here (e.g., SSH to server and run Docker commands)
