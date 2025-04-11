@@ -22,7 +22,7 @@ jobs:
        with:
          context: .
          push: true
-         tags: <docker-username>/<repo-name>:latest
+         tags: youzzaza/docker:latest
  deploy:
   runs-on: ubuntu-latest
   needs: build-and-push # Run after the build-and-push job
